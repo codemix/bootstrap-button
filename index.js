@@ -1,7 +1,7 @@
 function(){
   var jQuery = require('jquery');
   /* ============================================================
-   * bootstrap-button.js v2.0.1
+   * bootstrap-button.js v2.0.2
    * http://twitter.github.com/bootstrap/javascript.html#buttons
    * ============================================================
    * Copyright 2012 Twitter, Inc.
@@ -93,7 +93,9 @@ function(){
   
     $(function () {
       $('body').on('click.button.data-api', '[data-toggle^=button]', function ( e ) {
-        $(e.currentTarget).button('toggle')
+        var $btn = $(e.target)
+        if (!$btn.hasClass('btn')) $btn = $btn.closest('.btn')
+        $btn.button('toggle')
       })
     })
   
