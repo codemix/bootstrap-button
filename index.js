@@ -1,4 +1,4 @@
-function(){
+(function(){
   var jQuery = require('jquery');
   /* ============================================================
    * bootstrap-button.js v2.3.1
@@ -105,4 +105,4 @@ function(){
     })
   
   }(jQuery);
-}()
+})()
